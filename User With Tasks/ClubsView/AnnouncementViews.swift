@@ -527,7 +527,7 @@ struct SingleAnnouncementView: View {
                 Spacer()
             }
             
-            if !(announcement.peopleSeen?.contains(viewModel.userEmail ?? "") ?? false) && isClubMember && dateFromString(announcement.date) > Date().addingTimeInterval(-604800) {
+            if !(announcement.peopleSeen?.contains(viewModel.userEmail ?? "") ?? false) && isClubMember && dateFromString(announcement.date) > Date().addingTimeInterval(-604800) && !fullView{
                 Color.black.opacity(0.2)
                     .cornerRadius(5)
                 
